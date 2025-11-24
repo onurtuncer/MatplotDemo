@@ -14,8 +14,6 @@ The demo application generates a simple plot using the gnuplot backend of matplo
 
 ---
 
----
-
 ## Example Output
 
 Below is the sample figure you should see, if you succesfully build and run the demo application:
@@ -54,6 +52,7 @@ You can verify this in a fresh terminal / Developer Command Prompt:
 
 ```powershell
 gnuplot --version
+```
 
 ## Windows Build Using Visual Studio
 
