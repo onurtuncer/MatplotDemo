@@ -5,9 +5,10 @@
 // License - Filename : LICENSE
 // ----------------------------------------------------------------------
 
-#include <matplot/matplot.h>
-#include <vector>
 #include <cmath>
+#include <vector>
+#include <matplot/matplot.h>
+
 
 int main() {
     using namespace matplot;
@@ -41,7 +42,7 @@ int main() {
         }
     }
 
-    // --- Generate a dummy rocket trajectory in ECEF ---
+    // --- Generate a dummy orbit in ECEF ---
     // Here: simple inclined circular orbit as an example
     const size_t N = 500;
     auto theta = linspace(0.0, 4.0 * pi, N);  // 2 full revolutions
@@ -73,7 +74,7 @@ int main() {
     // Earth surface
     auto earth = surf(X, Y, Z);
     earth->edge_color("none");
-    colormap(palette::winter());   // any built-in palette is fine
+    colormap(palette::winter());   
 
     // Rocket trajectory
     auto traj = plot3(x_traj, y_traj, z_traj);
